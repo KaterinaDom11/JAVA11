@@ -2,9 +2,31 @@ package ru.netology.afisha;
 
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class PosterManagerTest {
+
+    @Test
+    public void сonstructorWithLimit() {
+        PosterManager servis = new PosterManager(5);
+
+        Assertions.assertEquals(5, servis.getLimit());
+    }
+
+    @Test
+    void сonstructorMoreWithLimit() {
+        PosterManager servis = new PosterManager(6);
+
+        Assertions.assertEquals(6, servis.getLimit());
+    }
+
+    @Test
+    void сonstructorLessWithLimit() {
+        PosterManager servis = new PosterManager(4);
+
+        Assertions.assertEquals(4, servis.getLimit());
+    }
 
 
     @Test
@@ -68,5 +90,6 @@ public class PosterManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
 
 }

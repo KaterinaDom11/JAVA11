@@ -10,8 +10,12 @@ public class PosterManager {
         this.limit = 5;
     }
 
-    public PosterManager(int limit) {
+    public PosterManager (int limit){
         this.limit = limit;
+    }
+
+    public int getLimit() {
+        return limit;
     }
 
     public void save(String film) {
